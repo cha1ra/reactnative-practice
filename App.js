@@ -6,7 +6,16 @@ import ListItem from './components/ListItem'
 export default function App() {
   return (
     <View style={styles.container}>
-      <ListItem></ListItem>
+      <ListItem
+        author="SampleNews"
+        imageUrl="https://picsum.photos/id/10/200/200"
+        title="なたはほか無論その反対家によって方のためを引込んだでし。はなはだ今に矛盾院は充分ある参考たなけれでもを込んて"
+      />
+      <ListItem
+        author="SampleNews"
+        imageUrl="https://picsum.photos/id/9/200/200"
+        title="引込んだでし。はなはだ今に矛盾院は充分ある参考たなけれでもを込んて"
+      />
     </View>
   )
 }
