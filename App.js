@@ -2,22 +2,21 @@ import { StatusBar } from 'expo-status-bar'
 import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 import ListItem from './components/ListItem'
+import articles from './dummies/articles.json'
 
 export default function App() {
-  return (
-    <View style={styles.container}>
+  const items = articles.map((article, index) => {
+    return (
       <ListItem
-        author="SampleNews"
-        imageUrl="https://picsum.photos/id/10/200/200"
-        title="なたはほか無論その反対家によって方のためを引込んだでし。はなはだ今に矛盾院は充分ある参考たなけれでもを込んて"
+        imageUrl={article.urlToImage}
+        title={article.title}
+        author={article.author}
+        key={index}
       />
-      <ListItem
-        author="SampleNews"
-        imageUrl="https://picsum.photos/id/9/200/200"
-        title="引込んだでし。はなはだ今に矛盾院は充分ある参考たなけれでもを込んて"
-      />
-    </View>
-  )
+    )
+  })
+
+  return <View style={styles.container}>{items}</View>
 }
 
 const styles = StyleSheet.create({
