@@ -5,7 +5,10 @@ import { StyleSheet, Text, View } from 'react-native'
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.itemContainer}></View>
+      <View style={styles.itemContainer}>
+        <View style={styles.leftContainer}></View>
+        <View style={styles.rightContainer}></View>
+      </View>
     </View>
   )
 }
@@ -22,5 +25,15 @@ const styles = StyleSheet.create({
     width: '100%',
     borderColor: 'gray',
     borderWidth: 1,
+    // こいつが横並びにするのに必要
+    flexDirection: 'row',
+  },
+  leftContainer: {
+    backgroundColor: 'red',
+    width: 100,
+  },
+  rightContainer: {
+    backgroundColor: 'blue',
+    flex: 1,
   },
 })
