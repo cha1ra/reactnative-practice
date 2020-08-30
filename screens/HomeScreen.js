@@ -7,7 +7,8 @@ import axios from 'axios'
 
 const URL = `http://newsapi.org/v2/top-headlines?country=jp&category=business&apiKey=${Constants.manifest.extra.newsApiKey}`
 
-export default HomeScreen = () => {
+export default HomeScreen = (props) => {
+  const { navigation } = props
   const [articles, setArticles] = useState([])
   // 第２引数に空配列を渡すと最初だけ実行する
   useEffect(() => {
@@ -32,6 +33,7 @@ export default HomeScreen = () => {
             imageUrl={item.urlToImage}
             title={item.title}
             author={item.author}
+            onPress={() => navigation.navigate('Article')}
           />
         )}
         keyExtractor={(item, index) => index.toString()}

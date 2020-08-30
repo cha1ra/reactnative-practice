@@ -1,11 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 
 // function component を使って書いてみる
 // const ListItem = ({image, title, author}) => { という書き方もできる！
 const ListItem = (props) => {
   return (
-    <View style={styles.itemContainer}>
+    <TouchableOpacity style={styles.itemContainer} onPress={props.onPress}>
       <View style={styles.leftContainer}>
         {!!props.imageUrl && (
           <Image
@@ -20,7 +20,7 @@ const ListItem = (props) => {
         </Text>
         <Text style={styles.subText}>{props.author}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }
 
