@@ -7,10 +7,12 @@ const ListItem = (props) => {
   return (
     <View style={styles.itemContainer}>
       <View style={styles.leftContainer}>
-        <Image
-          style={{ width: 100, height: 100 }}
-          source={{ uri: props.imageUrl }}
-        ></Image>
+        {!!props.imageUrl && (
+          <Image
+            style={{ width: 100, height: 100 }}
+            source={{ uri: props.imageUrl }}
+          ></Image>
+        )}
       </View>
       <View style={styles.rightContainer}>
         <Text numberOfLines={3} style={styles.text}>
