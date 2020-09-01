@@ -3,7 +3,7 @@ import { StyleSheet, SafeAreaView, Text, TouchableOpacity } from 'react-native'
 import { WebView } from 'react-native-webview'
 import { useDispatch, useSelector } from 'react-redux'
 import { addClip, deleteClip } from '../store/actions/user'
-import ClioButton from '../components/ClipButton'
+import ClipButton from '../components/ClipButton'
 
 const styles = StyleSheet.create({
   container: {
