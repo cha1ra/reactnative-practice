@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, TouchableOpacity } from 'react-native'
-import { FontAwesome } from '@export/vector-icons'
+import { FontAwesome } from '@expo/vector-icons'
 
 const styles = StyleSheet.create({
   container: {
